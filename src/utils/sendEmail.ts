@@ -19,7 +19,7 @@ export const sendEmail = async ({
   html: string;
 }) => {
   const info = await transporter.sendMail({
-    from: '"StrengthCare Connect" <info@strengthcareconnect.com>',
+    from: '"Your Company" <info@yourcompany.com>',
     to,
     subject,
     html,

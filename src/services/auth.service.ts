@@ -105,7 +105,7 @@ export const forgotPassword = async (data: ForgotPasswordInput) => {
     const resetUrl = `${process.env.ORIGIN_URL}/reset-password?token=${rawToken}`;
     await sendEmail({
       to: email,
-      subject: "StrengthCareConnect - Please verify your email",
+      subject: "Your Company - Please verify your email",
       html: forgotPasswordEmail(existing.firstname, resetUrl),
     });
     return { message: "If this email exists, a reset link has been sent." };

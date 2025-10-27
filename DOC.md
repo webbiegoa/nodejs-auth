@@ -1,13 +1,12 @@
-# SCC Portal API
+# Authentication APIs
 
 ## Overview
-The SCC Portal API (StrengthCareConnect Portal API) is a Node.js backend service that provides authentication and dashboard functionality for the SCC Portal application. It handles user registration, email verification, authentication, password management, and profile management.
+Node.js backend service that provides authentication and dashboard functionality application. It handles user registration, email verification, authentication, password management, and profile management.
 
 ## Features
 - User registration with email verification
 - Email verification via magic links
 - Login with email/password
-- Social login integration
 - Password reset functionality
 - JWT-based authentication with refresh tokens
 - User profile management
@@ -35,7 +34,7 @@ The SCC Portal API (StrengthCareConnect Portal API) is a Node.js backend service
 ### 1. Clone the repository
 ```bash
 git clone <repository-url>
-cd scc-portal-api
+
 ```
 
 ### 2. Install dependencies

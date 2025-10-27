@@ -12,7 +12,7 @@ export const baseEmailTemplate = ({
   <div style="max-width:600px;margin:0 auto;font-family:sans-serif;background:#f9f9f9;padding:20px;border-radius:8px;">
     <!-- Logo -->
     <div style="text-align:center;margin-bottom:20px;">
-      <img src="https://www.strengthcareconnect.com/_astro/strengthcareconnect.B-Z5c8cL_1QnSxR.webp" alt="Strength Care Connect" style="height:60px;" />
+      <img src="https://www.gstatic.com/webp/gallery/2.webp" alt="Your Domain" style="height:60px;" />
     </div>
 
     <!-- Card -->
@@ -33,9 +33,9 @@ export const baseEmailTemplate = ({
 
     <!-- Footer -->
     <div style="text-align:center;font-size:13px;color:#aaa;margin-top:24px;">
-      <p>You're receiving this email from Strength Care Connect.</p>
-      <p><a href="https://strengthcareconnect.com" style="color:#4f46e5;">Visit our website</a></p>
-      <p>© ${new Date().getFullYear()} Strength Care Connect. All rights reserved.</p>
+      <p>You're receiving this email from Your Company.</p>
+      <p><a href="https://yourcompany.com" style="color:#4f46e5;">Visit our website</a></p>
+      <p>© ${new Date().getFullYear()} Your Company. All rights reserved.</p>
     </div>
   </div>
 `;

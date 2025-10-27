@@ -1,5 +1,5 @@
 
-# scc-portal-api
+# authentication-api
 
 # EXPRESS INSTALLATION
 npm install express --save

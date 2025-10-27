@@ -1,12 +1,12 @@
 {
-  "name": "scc-portal-api",
+  "name": "authentication-api",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "dev": "ts-node src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
-    "restart": "npm run build && pm2 restart scc-portal-api",
+    "restart": "npm run build && pm2 restart authentication-api",
     "migrate": "npx prisma migrate deploy",
     "generate": "prisma generate",
     "postinstall": "prisma generate"

@@ -9,7 +9,7 @@ export const sendVerificationEmail = async (
   const verificationUrl = `${process.env.ORIGIN_URL}/verify-email?token=${token}`;
   await sendEmail({
     to: email,
-    subject: 'StrengthCareConnect - Please verify your email',
+    subject: 'Your Company - Please verify your email',
     html: emailVerificationEmail(firstname, verificationUrl),
   });
 };
