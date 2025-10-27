@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model SccUser {
+  id                Int       @id @default(autoincrement())
+  email             String    @unique
+  password          String?   // only for email/password users
+  salt              String?   // only if you’re using a hasher that needs a separate salt (e.g., scrypt). Argon2 stores salt inside hash.
+  oauthProvider     String?   // e.g., "google"
+  firstname         String
+  lastname          String
+  phone             String
+  isEmailVerified   Boolean   @default(false)
+  verificationId    String?
+  verificationExpires DateTime?
+  createdAt         DateTime  @default(now())
+  lastlogin         DateTime?
+
+  PasswordReset     PasswordReset[]
+}
+
+model PasswordReset {
+  id         String    @id @default(cuid())
+  userId     Int
+  tokenHash  String    // SHA-256 of the raw token; store hex string
+  expiresAt  DateTime
+  usedAt     DateTime?
+  createdAt  DateTime  @default(now())
+
+  user       SccUser   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@index([tokenHash])
+  // If you want to allow only one active reset per user:
+  // @@unique([userId, usedAt]) // usedAt NULL means "active"; Postgres treats NULLs as distinct so this won’t enforce it.
+}
