@@ -44,3 +44,14 @@ npm install
 
 ### 3. Set up environment variables
 Create a `.env` file in the root directory with the following variables:
+DATABASE_URL=
+ORIGIN_URL="http://localhost:5173"
+PORT=3001
+JWT_SECRET=""
+JWT_REFRESH_SECRET=""
+URL_ADDRESS="http://localhost"
+TURNSTILE_SECRET_KEY=
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USER=
+SMTP_PASS=
